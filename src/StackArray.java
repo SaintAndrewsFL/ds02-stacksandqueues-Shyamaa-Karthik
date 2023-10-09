@@ -1,7 +1,37 @@
+import java.util.ArrayList;
 
+public class StackArray<T> {
+    private ArrayList<T> arr = new ArrayList<T>();
 
-public class StackArray {
+    public T push(T item){
+        arr.add(0,item);
+        return item;
+    }
 
+    public T pop(){
+        T returner = arr.get(0);
+        arr.remove(0);
+        return returner;
+    }
+
+    public T peek(){
+        T returner = arr.get(0);
+        return returner;
+    }
+
+    public void display(){
+        for(int i = 0; i < arr.size(); i++){
+            System.out.println("Index " + i + " is: " + arr.get(i));
+        }
+    }
+
+    public int size(){
+        return arr.size();
+    }
+
+    public boolean isEmpty(){
+        return arr.get(0) == null;
+    }
 }
 
 
